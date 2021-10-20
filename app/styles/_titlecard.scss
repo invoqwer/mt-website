@@ -1,0 +1,50 @@
+// title card
+#title-card {
+  @include drop-shadow;
+
+  background-color: $light-gray;
+  margin: $title-card-top-margin auto;
+  width: $title-card-width;
+
+  .name {
+    @extend %title-text;
+    @include text-shadow;
+
+    color: $white;
+    background-color: $color1;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: $title-card-padding;
+  }
+
+  .links {
+    @extend %link-text;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding: $links-padding;
+  }
+
+  %link-container {
+    display: flex;
+    flex-flow: column wrap;
+    margin-right: $links-padding;
+
+    // align-items: center;
+  }
+
+  .link-description {
+    @extend %link-container;
+  }
+
+  .link-icons {
+    @extend %link-container;
+  }
+
+  .link-entry {
+    margin: 0.2em;
+  }
+}

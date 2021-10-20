@@ -1,0 +1,54 @@
+@import 'variables';
+
+// My fonts
+@each $font-name in $font-families {
+  @font-face {
+    $font-url: '../fonts/' + $font-name;
+
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: normal;
+    src:
+      url($font-url + '.woff2') format('woff2'),
+      url($font-url + '.woff') format('woff');
+  }
+}
+
+@mixin fonts($family, $size, $color) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+
+// font styles
+%title-text {
+  @include fonts(
+    $title-font,
+    $font-title-size,
+    $font-text-color
+  );
+}
+
+%link-text {
+  @include fonts(
+    $title-font,
+    $font-header-size,
+    $font-text-color
+  );
+}
+
+%copy-text {
+  @include fonts(
+    $copy-font,
+    $font-copy-size,
+    $font-text-color
+  );
+}
+
+%note-text {
+  @include fonts(
+    $copy-font,
+    $font-note-size,
+    $font-text-color
+  );
+}

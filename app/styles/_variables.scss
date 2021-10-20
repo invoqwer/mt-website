@@ -1,0 +1,56 @@
+@use 'sass:color';
+
+// colors
+$light-gray: color.adjust(#eee, $lightness: -5%);
+$dark-gray: color.adjust(#282725, $lightness: 5%);
+$white: #fff;
+$black: #0e1110;
+$blue: #1e8bc3;
+$blue2: #1f3a93;
+$blue3: #52b3d9;
+$blue4: color.adjust($blue2, $lightness: 15%);
+$blue5: #012833;
+$blue6: #0549c4;
+$blue7: #043693;
+$dark-blue: #070517;
+$green: #00a060;
+$green-alt: #049372;
+$red: #f00;
+$dark-red: #cf000f;
+$orange: #f9690e;
+$yellow: #f7ca18;
+$purple: #8e44ad;
+$blue-purple: #639;
+$light-purple: color.adjust($purple, $lightness: -10%);
+
+// project colors
+$dark: $dark-blue;
+$color1: $blue6;
+$color2: $green;
+$color2-alt: $green-alt;
+$highlight-color: $orange;
+$highlight-color2: $dark-red;
+$font-text-color: $dark;
+
+// font names
+$title-font: 'CircularStd-Medium';
+$copy-font: 'NittiGrotesk-Normal';
+$font-families: $title-font, $copy-font;
+
+// font styles
+$font-copy-size: 3em;
+$font-title-size: calc($font-copy-size + 5em);
+$font-header-size: calc($font-copy-size);
+$font-note-size: 1em;
+
+// sizes
+$title-card-top-margin: calc($font-copy-size + 5em);
+$title-card-width: calc($font-copy-size + 50em);
+$title-card-padding: 0.5em;
+$icon-size: 0.5em;
+$links-padding: 0.7em;
+
+// flair
+$prefixes: webkit moz ms o;
+$shadow-color: $dark;
+$shadow-len: 0.05em;

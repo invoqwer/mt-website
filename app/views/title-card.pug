@@ -1,0 +1,45 @@
+mixin link(href, name)
+  a(href=href)= name
+
+mixin fa-icon(ns, name)
+  span.fa-icon
+    i(class!=name class!=ns)
+
+//- title-card.pug
+#title-card
+  .name Marcus Tan
+  .links
+    .link-icons
+      .link-entry
+        +fa-icon('fas', 'fa-file-alt')
+      .link-entry
+        +fa-icon('fab', 'fa-linkedin')
+      .link-entry
+        +fa-icon('fab', 'fa-github')
+      .link-entry
+        +fa-icon('fas', 'fa-envelope')
+
+    .link-description
+      .link-entry
+        -
+          var rp = self ? 
+            self.htmlWebpackPlugin.options.resumePath : resumePath;
+          if (self) {
+            rp = `.${rp}/index.html`; 
+          }
+          var rpp = self ?
+            self.htmlWebpackPlugin.options.resumePdfPath : resumePdfPath;
+        | resume (
+        +link(rp, 'html')
+        | /
+        +link(rpp, 'pdf')
+        | )
+      //- linkedin
+      .link-entry
+        +link('http://www.linkedin.com/in/marcusmtan/', '/in/marcusmtan')
+      //- github
+      .link-entry
+        +link('http://github.com/invoqwer/', 'invoqwer')
+      //- email
+      .link-entry
+        +link('mailto:marcus.m.tan@gmail.com', 'marcus.m.tan@gmail.com')

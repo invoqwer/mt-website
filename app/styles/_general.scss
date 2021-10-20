@@ -1,0 +1,70 @@
+@import 'variables';
+
+@mixin build-prefix-values(
+  $property,
+  $value
+) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+@mixin transition(
+  $delay: 0s,
+  $property: all,
+  $duration: 300ms,
+  $timing: ease
+) {
+  $value: $property $duration $timing $delay;
+
+  // use default prefixes
+  @include build-prefix-values('transition', $value);
+}
+
+@mixin text-shadow(
+  $len: $shadow-len
+) {
+  text-shadow: $len $len $shadow-color;
+}
+
+@mixin drop-shadow(
+  $len: $shadow-len
+) {
+  box-shadow: $len $len $shadow-color;
+}
+
+// FontAwesome
+.fa-icon {
+  @include transition;
+
+  margin-left: 0.3em;
+
+  &.hover {
+    color: $color2-alt;
+  }
+}
+
+// links
+a {
+  @include transition;
+
+  color: $font-text-color;
+
+  &:link {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $highlight-color2;
+
+    // ~ .fa-icon {
+    //   color: $color2-alt;
+    // }
+
+    // &::after {
+    //   height: 0.1em;
+    // }
+  }
+}

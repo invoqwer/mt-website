@@ -1,0 +1,6 @@
+[submodule "invoqwer.github.io"]
+	path = invoqwer.github.io
+	url = git@github.com:invoqwer/invoqwer.github.io.git
+[submodule "mt-resume"]
+	path = mt-resume
+	url = git@github.com:invoqwer/mt-resume.git
