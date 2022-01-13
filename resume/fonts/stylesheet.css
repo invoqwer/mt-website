@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Ciutadella';
+    src: url('Ciutadella-Light.woff2') format('woff2'),
+        url('Ciutadella-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ciutadella';
+    src: url('Ciutadella-Medium.woff2') format('woff2'),
+        url('Ciutadella-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ciutadella';
+    src: url('Ciutadella-Bold.woff2') format('woff2'),
+        url('Ciutadella-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProspectusStd';
+    src: url('ProspectusStd-Bld.woff2') format('woff2'),
+        url('ProspectusStd-Bld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

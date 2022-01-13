@@ -1,0 +1,283 @@
+/* variables */
+/* 96 DPI - standard */
+:root {
+    --page-color: white;
+    /* US letter dimensions @ 300dpi */
+    --letter-width: 816px;
+    --letter-height: 1054px;
+    /* 1in = 96px */
+    --top-margin: 48px;
+    --side-margin: 48px;
+    /* page size */
+    --page-width: var(--letter-width);
+    --page-height: var(--letter-height);
+    --content-width: calc(var(--page-width) - var(--side-margin)*2);
+    --content-height: calc(var(--page-height) - var(--top-margin)*2);
+    /* font sizes */
+    /* 48pt = 64px */
+    --title-font-size: 64px;
+    /* 14pt = 19px */
+    --header-font-size: 18px;
+    /* 11pt = 16px */
+    --text-font-size: 14px;
+    --accent-font-size: var(--text-font-size);
+    /* letter spacing */
+    --html-top-padding: 200px;
+    --title-horizontal-padding: 4px;
+    --header-horitontal-padding: 1px;
+    --text-vertical-padding: 2px;
+    --text-horizontal-padding: 0.01em;
+    --bullet-point-size: calc(var(--text-font-size)/1.5);
+    --text-point-top-margin: 5px;
+    --text-left-margin: calc(var(--text-font-size) + 5px);
+    --section-top-padding: calc(var(--header-font-size) - 0px);
+    --section-bottom-padding: calc(var(--header-font-size) - 10px);
+    /* fonts */
+    --title-font: normal normal bold var(--title-font-size)/var(--title-font-size) 'ProspectusStd';
+    --header-font: normal normal 300 var(--header-font-size)/var(--header-font-size) 'Ciutadella';
+    --accent-font: normal normal 500 var(--accent-font-size)/calc(var(--accent-font-size) + var(--text-vertical-padding)) 'Ciutadella';
+    --text-font: normal normal 300 var(--text-font-size)/calc(var(--text-font-size) + var(--text-vertical-padding)) 'Ciutadella';
+}
+
+/* fonts */
+@font-face {
+    font-family: 'Ciutadella';
+    src: url('./fonts/Ciutadella-Light.woff2') format('woff2'),
+        url('./fonts/Ciutadella-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ciutadella';
+    src: url('./fonts/Ciutadella-Medium.woff2') format('woff2'),
+        url('./fonts/Ciutadella-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Ciutadella';
+    src: url('Ciutadella-Bold.woff2') format('woff2'),
+        url('Ciutadella-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'ProspectusStd';
+    src: url('./fonts/ProspectusStd-Bld.woff2') format('woff2'),
+        url('./fonts/ProspectusStd-Bld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* classes to remove */
+.zoom {
+    /* 300 dpi = zoom out to 1/3 for 100dpi */
+    /* zoom: 33.33%; */
+    zoom: 150%;
+}
+
+.body-outline {
+    border: 1px solid black;
+    box-shadow: 3px 3px;
+    margin-top: calc(var(--html-top-padding)/2);
+}
+
+.downloadpdf {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: var(--page-color);
+    border-radius: 7px;
+    position: absolute;
+    top: -60px;
+    right: 0;
+}
+
+a.downloadpdf {
+    text-decoration: none;
+}
+
+/* .test1 {
+    background-color: red;
+    border: 2px solid black;
+}
+
+.test2 {
+    background-color: green;
+    border: 2px solid black;
+}
+
+.test3 {
+    background-color: blue;
+    border: 2px solid black;
+} */
+
+/* needed for correctly rendering PDF */
+html {
+    -webkit-print-color-adjust: exact;
+    background-color: dimgray;
+    height: calc(var(--page-height) + var(--html-top-padding));
+}
+
+body {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    margin: 0 auto 0 auto;
+    width: var(--page-width);
+    height: var(--page-height);
+    background-color: var(--page-color);
+}
+
+a {
+    color: #043693;
+    text-decoration: underline;
+}
+
+ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '•';
+    font-size: var(--bullet-point-size);
+    position: absolute;
+    top: 0.2em;
+    left: -1em;          /* Adjust this value so that it appears where you want. */
+}
+
+#body-wrapper {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    margin: var(--top-margin) auto var(--top-margin) auto;
+    width: var(--content-width);
+    height: var(--content-height);
+    color: black;
+}
+
+.accent {
+    display: inline-block;
+    font: var(--accent-font);
+    letter-spacing: var(--text-horizontal-padding);
+}
+
+.text {
+    display: inline-block;
+    font: var(--text-font);
+    letter-spacing: var(--text-horizontal-padding);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#title-section {
+    position: relative;
+    height: var(--title-font-size);
+}
+
+#title-section > .title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font: var(--title-font);
+    letter-spacing: var(--title-horizontal-padding);
+    margin-bottom: -10px;
+}
+
+#title-section > .links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font: var(--text-font);
+}
+
+.links > a {
+    display: block;
+}
+
+.summary-wrapper {
+    margin: var(--section-top-padding) 0;
+}
+
+.section-wrapper {
+    position: relative;
+    height: var(--header-font-size);
+    margin-top: var(--section-top-padding);
+    margin-bottom: var(--section-bottom-padding);
+}
+
+.section-wrapper > .section-header {
+    position: absolute;
+    display: inline-block;
+    font: var(--header-font);
+    letter-spacing: var(--header-horitontal-padding);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--page-color);
+    padding-right: calc(var(--header-font-size)/3);
+}
+
+.section-wrapper > .section-line {
+    position: absolute;
+    display: inline-block;
+    width: calc(var(--content-width) - 10px);
+    top: calc(var(--header-font-size)/2);
+    left: 0;
+    border-top: 1px solid;
+}
+
+.experience-header {
+    margin: calc(var(--text-font-size)/2) 0 calc(var(--text-font-size)/4) 0;
+    height: var(--text-font-size);
+}
+
+.skill-header {
+    margin: 0 0 calc(var(--text-font-size)/2) 0;
+    height: var(--text-font-size);
+}
+
+.skill-header > .left {
+    float: left;
+    width: 20%;
+}
+
+.skill-header > .right {
+    float: right;
+    width: 80%;
+}
+
+
+.text-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.text-wrapper > ul {
+    margin: 0 0 0 var(--text-left-margin);
+    padding: 0;
+}
+
+li > .text-point {
+    margin: var(--text-point-top-margin) 0 0 0;
+    font: var(--text-font);
+    letter-spacing: var(--text-horizontal-padding);
+}
+
+#footer-section {
+    position: absolute;
+    bottom: 0;
+}

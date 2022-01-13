@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.getElementsByClassName("fa-icon"),t=document.querySelectorAll(".link-description > .link-entry");for(let s=0;s<t.length;s++)t[s].addEventListener("mouseover",(()=>{e.item(s).classList.add("hover")})),t[s].addEventListener("mouseout",(()=>{e.item(s).classList.remove("hover")}))})();
