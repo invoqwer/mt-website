@@ -2,6 +2,7 @@
 
 // colors
 $light-gray: color.adjust(#eee, $lightness: -5%);
+$light-gray2: color.adjust(#eee, $lightness: -20%);
 $dark-gray: color.adjust(#282725, $lightness: 5%);
 $white: #fff;
 $black: #0e1110;
@@ -53,4 +54,4 @@ $links-padding: 0.7em;
 // flair
 $prefixes: webkit moz ms o;
 $shadow-color: $dark;
-$shadow-len: 0.05em;
+$shadow-len: 0.5em;

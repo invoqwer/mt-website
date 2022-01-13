@@ -2,16 +2,17 @@
 #title-card {
   @include drop-shadow;
 
+  border: 1px solid $shadow-color;
   background-color: $light-gray;
   margin: $title-card-top-margin auto;
   width: $title-card-width;
 
   .name {
     @extend %title-text;
-    @include text-shadow;
+    @include text-shadow(0.05em);
 
     color: $white;
-    background-color: $color1;
+    background-color: $blue6;
     text-align: center;
     box-sizing: border-box;
     width: 100%;

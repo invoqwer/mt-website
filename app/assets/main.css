@@ -59,14 +59,12 @@ a:hover {
 }
 
 #starry-night {
-  background-color: #070517;
-  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 7px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 8px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 10px), radial-gradient(white, rgba(255, 255, 255, 0.25) 1px, transparent 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 7px);
-  background-size: 500px 500px, 350px 350px, 250px 250px, 150px 150px, 200px 410px;
-  background-position: 100px 100px, 40px 60px, 130px 270px, 70px 100px, 120px 50px;
+  background-color: #bbbbbb;
 }
 
 #title-card {
-  box-shadow: 0.05em 0.05em #070517;
+  box-shadow: 0.5em 0.5em #070517;
+  border: 1px solid #070517;
   background-color: #e1e1e1;
   margin: 8em auto;
   width: 53em;
