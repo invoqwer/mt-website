@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "devclient": "browser-sync start --proxy=localhost:4000 --files 'app/assets/*' 'app/views/*'",
-    "devserver": "webpack --watch --node-env=development --config webpack.config.js",
+    "dev": "webpack --watch --node-env=development --config webpack.config.js",
     "stylelint": "npx stylelint **/*.scss --fix",
     "jslint": "eslint . --fix",
     "lint": "npm run stylelint && npm run jslint",

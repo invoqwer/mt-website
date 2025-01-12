@@ -1,23 +1,19 @@
 // background
-#starry-night {
-  background-color: dimgray;
 
-  // background-image:
-  //   radial-gradient(white, rgb(255 255 255 / 20%) 2px, transparent 7px),
-  //   radial-gradient(white, rgb(255 255 255 / 15%) 1px, transparent 8px),
-  //   radial-gradient(white, rgb(255 255 255 / 10%) 2px, transparent 10px),
-  //   radial-gradient(white, rgb(255 255 255 / 25%) 1px, transparent 5px),
-  //   radial-gradient(rgb(255 255 255 / 40%), rgb(255 255 255 / 10%) 2px, transparent 7px);
-  // background-size:
-  //   500px 500px,
-  //   350px 350px,
-  //   250px 250px,
-  //   150px 150px,
-  //   200px 410px;
-  // background-position:
-  //   100px 100px,
-  //   40px 60px,
-  //   130px 270px,
-  //   70px 100px,
-  //   120px 50px;
+.background {
+  @include transition;
+
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  bottom: 0;
+  left: -40px;
+  right: -40px;
+}
+
+#farmlands {
+  background-image: url('../images/farmlands.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

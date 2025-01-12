@@ -5,24 +5,3 @@
 // sections
 @import 'background';
 @import 'titlecard';
-
-// dev mode indicator
-.dev-indicator {
-  @extend %note-text;
-
-  &::before {
-    content: 'DEVELOPMENT';
-    padding: 0.5em;
-  }
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-
-  @if $env == development {
-    background-color: green;
-  } @else if $env == production {
-    display: none;
-  }
-}

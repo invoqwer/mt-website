@@ -39,19 +39,19 @@ $copy-font: 'NittiGrotesk-Normal';
 $font-families: $title-font, $copy-font;
 
 // font styles
-$font-copy-size: 3em;
-$font-title-size: calc($font-copy-size + 5em);
+$font-copy-size: 2em;
+$font-title-size: calc($font-copy-size + 4em);
 $font-header-size: calc($font-copy-size);
 $font-note-size: 1em;
 
 // sizes
-$title-card-top-margin: calc($font-copy-size + 5em);
-$title-card-width: calc($font-copy-size + 50em);
-$title-card-padding: 0.5em;
+$title-card-top-margin: calc($font-copy-size + 4em);
+$title-card-width: calc($font-copy-size + 38em);
+$title-card-padding: 2.5em;
 $icon-size: 0.5em;
 $links-padding: 0.7em;
 
 // flair
 $prefixes: webkit moz ms o;
 $shadow-color: $dark;
-$shadow-len: 0.5em;
+$shadow-len: 0.7em;

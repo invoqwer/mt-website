@@ -7,6 +7,7 @@ const __root = path.resolve();
 const appPath = path.join(__root, 'app');
 const appAssets = path.join(appPath, 'assets');
 const viewPath = path.join(appPath, 'views');
+const imagesPath = path.join(appPath, 'images');
 
 const app = express();
 
@@ -30,6 +31,7 @@ const dev = (env === 'development') ? true : false;
   if (dev) {
     // mt-website
     app.use(express.static(appAssets));
+    app.use(express.static(imagesPath));
     app.set('view engine', 'pug');
     app.set('views', viewPath);
   } else {

@@ -28,7 +28,9 @@ const webpackConfig = (async () => {
         path.join(appPath, 'assets') :
         distPath,
       filename: '[name].js',
-      clean: true,
+      clean: {
+        keep: /\.git$/,
+      },
     },
     mode: env,
     plugins: [
@@ -62,7 +64,6 @@ const webpackConfig = (async () => {
             'css-loader',
           ],
         },
-
       ],
     },
   };
@@ -116,13 +117,12 @@ const webpackConfig = (async () => {
           test: /\.(woff(2)?|ttf|eot)$/,
           type: 'asset/resource',
           generator: {
-            filename: './assets/[name][ext]',
+            filename: './assets/fonts/[name][ext]',
           },
         },
     );
   }
 
-  // log(config);
   return config;
 })();
 

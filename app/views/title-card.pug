@@ -1,5 +1,5 @@
 mixin link(href, name)
-  a(href=href)= name
+  a(href=href, target='_blank')= name
 
 mixin fa-icon(ns, name)
   span.fa-icon
@@ -7,9 +7,19 @@ mixin fa-icon(ns, name)
 
 //- title-card.pug
 #title-card
-  .name Marcus Tan
+  .name-container
+    .name Marcus Tan
+    .life-calendar
+      - 
+        var lifetime = 90;
+        var birthdate = 1995;
+        var elapsed = Math.round((new Date().getFullYear() - birthdate) / lifetime * 100);
+      | I am 
+      +link('https://www.bryanbraun.com/your-life/weeks.html',`${elapsed}% dead`)
   .links
     .link-icons
+      .link-entry
+        +fa-icon('fas', 'fa-envelope')
       .link-entry
         +fa-icon('fas', 'fa-file-alt')
       .link-entry
@@ -17,9 +27,12 @@ mixin fa-icon(ns, name)
       .link-entry
         +fa-icon('fab', 'fa-github')
       .link-entry
-        +fa-icon('fas', 'fa-envelope')
-
+        +fa-icon('fab', 'fa-goodreads')
     .link-description
+      //- email
+      .link-entry
+        +link('mailto:marcus.m.tan@gmail.com', 'marcus.m.tan@gmail.com')
+      //- resume
       .link-entry
         -
           var rp = self ? 
@@ -40,6 +53,18 @@ mixin fa-icon(ns, name)
       //- github
       .link-entry
         +link('http://github.com/invoqwer/', 'invoqwer')
-      //- email
+      //- goodreads
       .link-entry
-        +link('mailto:marcus.m.tan@gmail.com', 'marcus.m.tan@gmail.com')
+        +link('http://www.goodreads.com/user/show/185831950-marcus-tan', 'reading list')
+  .webring-container
+    <div class="latex4000Webring">
+      <a href="https://latex4000.neocities.org" title="Collective">Latex 4000</a>
+      <div class="latex4000WebringButtons">
+        <a href="https://latex4000.neocities.org" id="latex4000Prev" title="Previous">←</a>
+        <a href="#" id="latex4000Random" title="Random">Random</a>
+        <a href="https://latex4000.neocities.org" id="latex4000Next" title="Next">→</a>
+      </div>
+      <script id="latex4000Webring" src="https://latex4000.neocities.org/webring.min.js" data-alias="invoker"></script>
+    </div>
+
+      

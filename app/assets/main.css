@@ -15,20 +15,37 @@
 }
 #title-card .name {
   font-family: "CircularStd-Medium", sans-serif;
-  font-size: 8em;
-  color: #070517;
+  font-size: 6em;
 }
 
 #title-card .links {
   font-family: "CircularStd-Medium", sans-serif;
-  font-size: 3em;
+  font-size: 2em;
+}
+
+#title-card .life-calendar {
+  font-family: "NittiGrotesk-Normal", sans-serif;
+  font-size: 2em;
+}
+
+#title-card .latex4000Webring {
+  font-family: "NittiGrotesk-Normal", sans-serif;
+  font-size: 1em;
+}
+
+body {
+  padding: 0;
+  margin: 0;
   color: #070517;
 }
 
-.dev-indicator {
-  font-family: "NittiGrotesk-Normal", sans-serif;
-  font-size: 1em;
-  color: #070517;
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .fa-icon {
@@ -58,31 +75,57 @@ a:hover {
   color: #cf000f;
 }
 
-#starry-night {
-  background-color: #bbbbbb;
+.background {
+  -webkit-transition: all 300ms ease 0s;
+  -moz-transition: all 300ms ease 0s;
+  -ms-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  bottom: 0;
+  left: -40px;
+  right: -40px;
+}
+
+#farmlands {
+  background-image: url(01f41d78fe91462e2ad1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #title-card {
-  box-shadow: 0.5em 0.5em #070517;
+  box-shadow: 0.7em 0.7em #070517;
   border: 1px solid #070517;
   background-color: #e1e1e1;
-  margin: 8em auto;
-  width: 53em;
+  margin: 6em auto;
+  width: 40em;
 }
-#title-card .name {
-  text-shadow: 0.05em 0.05em #070517;
+#title-card .name-container {
   color: #fff;
-  background-color: #0549c4;
+  background-color: #043693;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 0.5em;
+  padding: 2.5em;
+}
+#title-card .name {
+  text-shadow: 0.07em 0.07em #070517;
+}
+#title-card .life-calendar a {
+  color: #fff;
+}
+#title-card .life-calendar a:hover {
+  color: #f9690e;
 }
 #title-card .links {
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
   width: 100%;
+  margin: 0 auto;
   padding: 0.7em;
 }
 #title-card .link-icons, #title-card .link-description {
@@ -93,15 +136,11 @@ a:hover {
 #title-card .link-entry {
   margin: 0.2em;
 }
-
-.dev-indicator {
-  position: fixed;
-  top: 0;
-  left: 0;
+#title-card .latex4000Webring {
+  padding-bottom: 1em;
+  width: 100%;
   text-align: center;
-  background-color: green;
 }
-.dev-indicator::before {
-  content: "DEVELOPMENT";
-  padding: 0.5em;
+#title-card .latex4000Webring a {
+  text-decoration: none;
 }

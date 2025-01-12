@@ -7,16 +7,42 @@
   margin: $title-card-top-margin auto;
   width: $title-card-width;
 
-  .name {
-    @extend %title-text;
-    @include text-shadow(0.05em);
-
+  .name-container {
     color: $white;
-    background-color: $blue6;
+    background-color: $blue7;
     text-align: center;
     box-sizing: border-box;
     width: 100%;
     padding: $title-card-padding;
+  }
+
+  .name {
+    @extend %title-text;
+    @include text-shadow(0.07em);
+  }
+
+  .webring-container {
+    @extend %note-text;
+
+    padding-bottom: $font-note-size;
+    width: 100%;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .life-calendar {
+    @extend %copy-text;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
   }
 
   .links {
@@ -26,6 +52,7 @@
     flex-flow: row;
     justify-content: flex-start;
     width: 100%;
+    margin: 0 auto;
     padding: $links-padding;
   }
 
