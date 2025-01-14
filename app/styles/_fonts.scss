@@ -27,11 +27,15 @@
   );
 }
 
+// match copy and title font sizes
 %link-text {
   @include fonts(
     $title-font,
-    $font-header-size
+    calc($font-copy-size - 1.1em)
   );
+
+  // position: relative;
+  // top: -1px;
 }
 
 %copy-text {

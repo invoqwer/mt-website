@@ -1,0 +1,33 @@
+// general card
+
+.card {
+  @include drop-shadow;
+
+  border: 1px solid $shadow-color;
+  background-color: $light-gray;
+  min-width: $min-card-width;
+
+  .card-title-container {
+    text-align: center;
+    box-sizing: border-box;
+    padding: $card-title-padding;
+  }
+
+  .card-title {
+    @extend %title-text;
+    @include text-shadow;
+  }
+
+  .card-subtitle {
+    padding-top: $card-subtitle-padding;
+  }
+
+  .card-body {
+    padding: $card-body-padding;
+
+    .summary {
+      text-align: center;
+      padding-bottom: 2em;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+#index {
+  .card-title-container {
+    color: $white;
+    background-color: $blue7;
+  }
+
+  .life-calendar {
+    a {
+      color: $white;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+
+    .card-body {
+      margin: 0 auto;
+    }
+  }
+
+  %link {
+    display: flex;
+    flex-flow: column wrap;
+
+    // align-items: center;
+  }
+
+  .link-entry {
+    margin: 0.3em;
+  }
+
+  .link-description {
+    @extend %link;
+
+    position: relative;
+    top: -4px;
+  }
+
+  .link-icons {
+    @extend %link;
+  }
+}

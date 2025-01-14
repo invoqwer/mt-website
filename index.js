@@ -28,31 +28,53 @@ const dev = (env === 'development') ? true : false;
   const resumeDistPath = path.join(__resumeRoot, rcfg.distPath);
   app.use(rcfg.resumePath, express.static(resumeDistPath));
 
+  // dev
   if (dev) {
-    // mt-website
     app.use(express.static(appAssets));
     app.use(express.static(imagesPath));
     app.set('view engine', 'pug');
     app.set('views', viewPath);
-  } else {
-    app.use(express.static(websiteDistPath));
-  }
 
-  app.listen(wcfg.port, () => {
-    log(`mt-website: http://localhost:${wcfg.port}`);
-  });
-
-  // html
-  app.get('/', async (req, res) => {
-    if (dev) {
-      res.render('layout', {
+    app.get('/', async (req, res) => {
+      res.render('index', {
         resumePath: rcfg.resumePath,
         resumePdfPath: rcfg.resumePdfPath,
       });
-    } else {
+    });
+
+    app.get('/projects', async (req, res) => {
+      res.render('projects');
+    });
+
+    app.get('/blog', async (req, res) => {
+      res.render('blog');
+    });
+
+  // prod
+  } else {
+    app.use(express.static(websiteDistPath));
+
+    app.get('/', async (req, res) => {
       res.sendFile(
           path.join(websiteDistPath, 'index.html'),
       );
-    }
+    });
+
+    app.get('/projects', async (req, res) => {
+      res.sendFile(
+          path.join(websiteDistPath, 'projects.html'),
+      );
+    });
+
+    app.get('/blog', async (req, res) => {
+      res.sendFile(
+          path.join(websiteDistPath, 'blog.html'),
+      );
+    });
+  }
+
+  // serve
+  app.listen(wcfg.port, () => {
+    log(`mt-website: http://localhost:${wcfg.port}`);
   });
 })();

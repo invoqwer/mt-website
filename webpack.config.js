@@ -83,11 +83,19 @@ const webpackConfig = (async () => {
   } else if (env === 'production') {
     config.plugins.push(
         new HtmlWebpackPlugin({
-          template: path.join(appPath, 'views', 'layout.pug'),
+          template: path.join(appPath, 'views', 'index.pug'),
+          filename: 'index.html',
           resumePath: rcfg.resumePath,
           resumePdfPath: rcfg.resumePdfPath,
-          minify: false,
           inject: true,
+        }),
+        new HtmlWebpackPlugin({
+          template: path.join(appPath, 'views', 'projects.pug'),
+          filename: 'projects.html',
+        }),
+        new HtmlWebpackPlugin({
+          template: path.join(appPath, 'views', 'blog.pug'),
+          filename: 'blog.html',
         }),
         new CopyWebpackPlugin({
           patterns: [

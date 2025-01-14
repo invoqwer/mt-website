@@ -27,7 +27,7 @@ container.addEventListener('mousemove', (e) => {
 
   // Move background in opposite direction of mouse
   // Multiply to control movement amount
-  const xMove = -xPercent * 40;
+  const xMove = -xPercent * 30;
 
   background.style.transform = `translateX(${xMove}px)`;
 });

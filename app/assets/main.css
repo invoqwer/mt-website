@@ -13,22 +13,22 @@
   font-weight: normal;
   src: url(d73d0c68336bb2cc72f8.woff2) format("woff2"), url(c1fbab995394e71593da.woff) format("woff");
 }
-#title-card .name {
+.card .card-title {
   font-family: "CircularStd-Medium", sans-serif;
-  font-size: 6em;
+  font-size: 3em;
 }
 
-#title-card .links {
+a {
   font-family: "CircularStd-Medium", sans-serif;
-  font-size: 2em;
+  font-size: 0.9em;
 }
 
-#title-card .life-calendar {
+body {
   font-family: "NittiGrotesk-Normal", sans-serif;
   font-size: 2em;
 }
 
-#title-card .latex4000Webring {
+.webring-container {
   font-family: "NittiGrotesk-Normal", sans-serif;
   font-size: 1em;
 }
@@ -54,7 +54,6 @@ body {
   -ms-transition: all 300ms ease 0s;
   -o-transition: all 300ms ease 0s;
   transition: all 300ms ease 0s;
-  margin-left: 0.3em;
 }
 .fa-icon.hover {
   color: #049372;
@@ -75,6 +74,31 @@ a:hover {
   color: #cf000f;
 }
 
+.card {
+  box-shadow: 0.7em 0.7em #070517;
+  border: 1px solid #070517;
+  background-color: #e1e1e1;
+  min-width: 18em;
+}
+.card .card-title-container {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 2em;
+}
+.card .card-title {
+  text-shadow: 0.08em 0.08em #070517;
+}
+.card .card-subtitle {
+  padding-top: 0.5em;
+}
+.card .card-body {
+  padding: 1em;
+}
+.card .card-body .summary {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
 .background {
   -webkit-transition: all 300ms ease 0s;
   -moz-transition: all 300ms ease 0s;
@@ -85,8 +109,8 @@ a:hover {
   z-index: -10;
   top: 0;
   bottom: 0;
-  left: -40px;
-  right: -40px;
+  left: -30px;
+  right: -30px;
 }
 
 #farmlands {
@@ -96,51 +120,49 @@ a:hover {
   background-position: center;
 }
 
-#title-card {
-  box-shadow: 0.7em 0.7em #070517;
-  border: 1px solid #070517;
-  background-color: #e1e1e1;
-  margin: 6em auto;
-  width: 40em;
-}
-#title-card .name-container {
+#index .card-title-container {
   color: #fff;
   background-color: #043693;
-  text-align: center;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 2.5em;
 }
-#title-card .name {
-  text-shadow: 0.07em 0.07em #070517;
-}
-#title-card .life-calendar a {
+#index .life-calendar a {
   color: #fff;
 }
-#title-card .life-calendar a:hover {
+#index .life-calendar a:hover {
   color: #f9690e;
 }
-#title-card .links {
+#index .links {
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0.7em;
 }
-#title-card .link-icons, #title-card .link-description {
+#index .links .card-body {
+  margin: 0 auto;
+}
+#index .link-icons, #index .link-description {
   display: flex;
   flex-flow: column wrap;
-  margin-right: 0.7em;
 }
-#title-card .link-entry {
-  margin: 0.2em;
+#index .link-entry {
+  margin: 0.3em;
 }
-#title-card .latex4000Webring {
-  padding-bottom: 1em;
+#index .link-description {
+  position: relative;
+  top: -4px;
+}
+#projects .card-title-container {
+  color: #fff;
+  background-color: #cf000f;
+}
+
+.webring-container {
   width: 100%;
   text-align: center;
 }
-#title-card .latex4000Webring a {
+.webring-container a {
   text-decoration: none;
+}
+
+#blog .card-title-container {
+  color: #fff;
+  background-color: #639;
 }

@@ -40,18 +40,18 @@ $font-families: $title-font, $copy-font;
 
 // font styles
 $font-copy-size: 2em;
-$font-title-size: calc($font-copy-size + 4em);
-$font-header-size: calc($font-copy-size);
+$font-title-size: calc($font-copy-size + 1em);
 $font-note-size: 1em;
 
 // sizes
-$title-card-top-margin: calc($font-copy-size + 4em);
-$title-card-width: calc($font-copy-size + 38em);
-$title-card-padding: 2.5em;
+$min-card-width: 18em;
+$card-title-padding: 2em;
+$card-subtitle-padding: 0.5em;
+$card-body-padding: 1em;
+$card-shadow-len: 0.7em;
 $icon-size: 0.5em;
-$links-padding: 0.7em;
 
 // flair
 $prefixes: webkit moz ms o;
 $shadow-color: $dark;
-$shadow-len: 0.7em;
+$text-shadow-len: 0.08em;

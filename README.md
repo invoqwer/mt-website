@@ -4,6 +4,11 @@
 - Production: `npm run prod`
 
 ## TODO
+- browsersync
+- mobile styling
+- address webpack warnings
+
+## Style ideas
 - link icons circle BG
 - better bg / animation for name card
 - cool animation day -> night
