@@ -5,12 +5,34 @@
 
   border: 1px solid $shadow-color;
   background-color: $light-gray;
-  min-width: $min-card-width;
+  width: $card-width-xs;
+  margin: $card-margin;
+
+  @include responsive('small') {
+    width: $card-width-sm;
+  }
+
+  @include responsive('medium') {
+    width: $card-width-md;
+  }
+
+  @include responsive('large') {
+    width: $card-width-lg;
+  }
 
   .card-title-container {
     text-align: center;
     box-sizing: border-box;
     padding: $card-title-padding;
+    color: $white;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
   }
 
   .card-title {

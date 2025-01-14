@@ -17,20 +17,69 @@
   font-family: "CircularStd-Medium", sans-serif;
   font-size: 3em;
 }
+@media (min-width: 568px) {
+  .card .card-title {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 768px) {
+  .card .card-title {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 3.6em;
+  }
+}
+@media (min-width: 992px) {
+  .card .card-title {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 3.2em;
+  }
+}
 
 a {
   font-family: "CircularStd-Medium", sans-serif;
   font-size: 0.9em;
 }
+@media (min-width: 568px) {
+  a {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 768px) {
+  a {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 992px) {
+  a {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 0.8em;
+  }
+}
 
 body {
   font-family: "NittiGrotesk-Normal", sans-serif;
-  font-size: 2em;
-}
-
-.webring-container {
-  font-family: "NittiGrotesk-Normal", sans-serif;
   font-size: 1em;
+}
+@media (min-width: 568px) {
+  body {
+    font-family: "NittiGrotesk-Normal", sans-serif;
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-family: "NittiGrotesk-Normal", sans-serif;
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    font-family: "NittiGrotesk-Normal", sans-serif;
+    font-size: 2.6em;
+  }
 }
 
 body {
@@ -41,7 +90,7 @@ body {
 
 .container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,12 +127,35 @@ a:hover {
   box-shadow: 0.7em 0.7em #070517;
   border: 1px solid #070517;
   background-color: #e1e1e1;
-  min-width: 18em;
+  width: 16em;
+  margin: 5em;
+}
+@media (min-width: 568px) {
+  .card {
+    width: 16em;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    width: 21em;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    width: 21em;
+  }
 }
 .card .card-title-container {
   text-align: center;
   box-sizing: border-box;
   padding: 2em;
+  color: #fff;
+}
+.card .card-title-container a {
+  color: #fff;
+}
+.card .card-title-container a:hover {
+  color: #f9690e;
 }
 .card .card-title {
   text-shadow: 0.08em 0.08em #070517;
@@ -121,14 +193,7 @@ a:hover {
 }
 
 #index .card-title-container {
-  color: #fff;
   background-color: #043693;
-}
-#index .life-calendar a {
-  color: #fff;
-}
-#index .life-calendar a:hover {
-  color: #f9690e;
 }
 #index .links {
   display: flex;
@@ -147,10 +212,9 @@ a:hover {
 }
 #index .link-description {
   position: relative;
-  top: -4px;
+  top: -0.1em;
 }
 #projects .card-title-container {
-  color: #fff;
   background-color: #cf000f;
 }
 
@@ -163,6 +227,5 @@ a:hover {
 }
 
 #blog .card-title-container {
-  color: #fff;
   background-color: #639;
 }

@@ -1,22 +1,6 @@
 @import 'variables';
 
-body {
-  @extend %copy-text;
-
-  padding: 0;
-  margin: 0;
-  color: $font-text-color;
-}
-
-.container {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
+// mixins
 @mixin build-prefix-values(
   $property,
   $value
@@ -52,6 +36,24 @@ body {
   box-shadow: $len $len $shadow-color;
 }
 
+// general
+body {
+  @extend %copy-text;
+
+  padding: 0;
+  margin: 0;
+  color: $font-text-color;
+}
+
+.container {
+  position: relative;
+  min-height: $container-min-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 // FontAwesome
 .fa-icon {
   @include transition;
@@ -61,7 +63,6 @@ body {
   }
 }
 
-// links
 a {
   @include transition;
   @extend %link-text;

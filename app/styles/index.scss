@@ -1,17 +1,6 @@
 #index {
   .card-title-container {
-    color: $white;
     background-color: $blue7;
-  }
-
-  .life-calendar {
-    a {
-      color: $white;
-
-      &:hover {
-        color: $highlight-color;
-      }
-    }
   }
 
   .links {
@@ -39,7 +28,7 @@
     @extend %link;
 
     position: relative;
-    top: -4px;
+    top: -0.1em;
   }
 
   .link-icons {

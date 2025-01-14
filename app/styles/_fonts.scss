@@ -25,17 +25,56 @@
     $title-font,
     $font-title-size
   );
+
+  @include responsive('small') {
+    @include fonts(
+      $title-font,
+      $font-title-size-sm
+    );
+  }
+
+  @include responsive('medium') {
+    @include fonts(
+      $title-font,
+      $font-title-size-md
+    );
+  }
+
+  @include responsive('large') {
+    @include fonts(
+      $title-font,
+      $font-title-size-lg
+    );
+  }
 }
 
 // match copy and title font sizes
 %link-text {
   @include fonts(
     $title-font,
-    calc($font-copy-size - 1.1em)
+    calc($font-copy-size - 0.1em)
   );
 
-  // position: relative;
-  // top: -1px;
+  @include responsive('small') {
+    @include fonts(
+      $title-font,
+      calc($font-copy-size-sm - 0.8em)
+    );
+  }
+
+  @include responsive('medium') {
+    @include fonts(
+      $title-font,
+      calc($font-copy-size-md - 1.2em)
+    );
+  }
+
+  @include responsive('large') {
+    @include fonts(
+      $title-font,
+      calc($font-copy-size-lg - 1.8em)
+    );
+  }
 }
 
 %copy-text {
@@ -43,11 +82,46 @@
     $copy-font,
     $font-copy-size
   );
+
+  @include responsive('small') {
+    @include fonts(
+      $copy-font,
+      $font-copy-size-sm
+    );
+  }
+
+  @include responsive('medium') {
+    @include fonts(
+      $copy-font,
+      $font-copy-size-md
+    );
+  }
+
+  @include responsive('large') {
+    @include fonts(
+      $copy-font,
+      $font-copy-size-lg
+    );
+  }
 }
 
-%note-text {
-  @include fonts(
-    $copy-font,
-    $font-note-size
-  );
-}
+// %note-text {
+//   @include fonts(
+//     $copy-font,
+//     $font-note-size
+//   );
+
+//   @include responsive('medium') {
+//     @include fonts(
+//       $copy-font,
+//       $font-note-size-md
+//     );
+//   }
+
+//   @include responsive('large') {
+//     @include fonts(
+//       $copy-font,
+//       $font-note-size-lg
+//     );
+//   }
+// }

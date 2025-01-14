@@ -1,4 +1,23 @@
 @use 'sass:color';
+@use 'sass:map';
+
+// breakpoints
+$mobile-landscape: 568px;
+$tablet: 768px;
+$desktop: 992px;
+$breakpoints: (
+  'small':  $mobile-landscape,
+  'medium': $tablet,
+  'large': $desktop
+);
+
+@mixin responsive($size) {
+  $query: map.get($breakpoints, $size);
+
+  @media (min-width: $query) {
+    @content;
+  }
+}
 
 // colors
 $light-gray: color.adjust(#eee, $lightness: -5%);
@@ -39,12 +58,29 @@ $copy-font: 'NittiGrotesk-Normal';
 $font-families: $title-font, $copy-font;
 
 // font styles
-$font-copy-size: 2em;
-$font-title-size: calc($font-copy-size + 1em);
-$font-note-size: 1em;
+// $font-note-size: 0.75em;
+$font-copy-size: 1em;
+$font-title-size: 3em;
+
+// $font-note-size-sm: 0.75em;
+$font-copy-size-sm: 1.6em;
+$font-title-size-sm: 2.5em;
+
+// $font-note-size-md: 1em;
+$font-copy-size-md: 2em;
+$font-title-size-md: 3.6em;
+
+// $font-note-size-lg: 1em;
+$font-copy-size-lg: 2.6em;
+$font-title-size-lg: 3.2em;
 
 // sizes
-$min-card-width: 18em;
+$container-min-height: 100vh;
+$card-margin: 5em;
+$card-width-xs: 16em;
+$card-width-sm: 16em;
+$card-width-md: 21em;
+$card-width-lg: 21em;
 $card-title-padding: 2em;
 $card-subtitle-padding: 0.5em;
 $card-body-padding: 1em;

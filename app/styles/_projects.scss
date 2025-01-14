@@ -1,12 +1,11 @@
 #projects {
   .card-title-container {
-    color: $white;
     background-color: $dark-red;
   }
 }
 
 .webring-container {
-  @extend %note-text;
+  // @extend %note-text;
 
   width: 100%;
   text-align: center;

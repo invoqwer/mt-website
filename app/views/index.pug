@@ -12,11 +12,11 @@ block content
   #index.card
     .card-title-container
       .card-title Marcus Tan
-      .card-subtitle.life-calendar
+      .card-subtitle
         - 
           var lifetime = 90;
           var birthdate = 1995;
-          var elapsed = Math.round((new Date().getFullYear() - birthdate) / lifetime * 100);
+          var elapsed = Math.round((new Date().getFullYear() - birthdate) / lifetime * 10000) / 100;
         | I am 
         +link('https://www.bryanbraun.com/your-life/weeks.html',`${elapsed}% dead`)
     .card-body
