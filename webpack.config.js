@@ -29,7 +29,7 @@ const webpackConfig = (async () => {
         distPath,
       filename: '[name].js',
       clean: {
-        keep: /\.git$/,
+        keep: /\.git|CNAME$/,
       },
     },
     mode: env,
