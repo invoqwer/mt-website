@@ -168,7 +168,6 @@ a:hover {
 }
 .card .card-body .summary {
   text-align: center;
-  padding-bottom: 2em;
 }
 
 .background {
@@ -219,10 +218,15 @@ a:hover {
 }
 
 .webring-container {
-  width: 100%;
   text-align: center;
 }
-.webring-container a {
+
+.webring {
+  display: inline-block;
+  background-color: #bbbbbb;
+  padding: 0.2em 0.5em;
+}
+.webring a {
   text-decoration: none;
 }
 

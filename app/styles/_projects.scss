@@ -5,10 +5,13 @@
 }
 
 .webring-container {
-  // @extend %note-text;
-
-  width: 100%;
   text-align: center;
+}
+
+.webring {
+  display: inline-block;
+  background-color: $light-gray2;
+  padding: 0.2em 0.5em;
 
   a {
     text-decoration: none;
