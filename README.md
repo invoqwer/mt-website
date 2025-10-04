@@ -4,6 +4,7 @@
 - Production: `npm run prod`
 
 ## TODO
+- make a script to update resume + publish to github pages in one command
 - browsersync
 - mobile styling
 - address webpack warnings
